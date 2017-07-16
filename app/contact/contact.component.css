@@ -1,0 +1,25 @@
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+.btn {
+  border: 1px solid black;
+  background: #ffffff;
+  border-radius: 4px;
+  color: #000000;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 12px 20px;
+  transition: all .1s linear;
+}
+.btn:active {
+  box-shadow: 0 2px 0 #000000;
+  transform: translateY(3px);
+  border: 1px solid black;
+  background: #ffffff;
+  outline: 0;
+}
+#testheader {
+  text-align: center;
+  color: red;
+}

@@ -1,0 +1,127 @@
+<div class="container customFont">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header" >Landing page
+      </h1>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="container col-md-8 customCarousel" *ngIf="screenSize() > 450;">
+        <div
+          ng2-carouselamos
+          class="slides-wrapper"
+          [items]="items"
+          [width]="900"
+          [$prev]="prev"
+          [$next]="next"
+          [$item]="item"
+        >
+        </div>
+
+
+        <ng-template #prev>
+          <img src="assets/img/left-arrow.png" id="left" />
+        </ng-template>
+        <ng-template #next>
+          <img src="assets/img/right-arrow.png" id="right" />
+        </ng-template>
+        <ng-template #item let-item let-i="index">
+
+          <div class="items">
+            <img src="{{ item.name }}">
+          </div>
+
+        </ng-template>
+
+
+
+
+    </div>
+
+    <div class="container" *ngIf="screenSize() <= 450;">
+      <img src="/assets/img/page1.png" class="img-responsive">
+    </div>
+
+    <div class="col-md-4">
+      <h3>Project description</h3>
+      <p>This is my first project - a landing page promoting a bicycle. The main idea was to create a simple black and white design with clear product presentation and CTA.</p>
+      <h3>Technologies used</h3>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>Vanilla JavaScript</li>
+        <li>jQuery</li>
+      </ul>
+      <br/>
+      <button class="btn btn-default" (click)="navigateToWebsite()">Visit website</button>
+    </div>
+
+  </div>
+
+  <!-- Second project -->
+
+  <div class="container customFont" id="secondProject">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header" >Information page
+        </h1>
+      </div>
+    </div>
+
+    <div class="row">
+
+    <div class="container col-md-8 customCarousel" *ngIf="screenSize() > 450;">
+      <div
+        ng2-carouselamos
+        class="slides-wrapper"
+        [items]="project2_items"
+        [width]="900"
+        [$prev]="prev"
+        [$next]="next"
+        [$item]="item"
+      >
+      </div>
+
+
+      <ng-template #prev>
+        <img src="assets/img/left-arrow.png" id="left" />
+      </ng-template>
+      <ng-template #next>
+        <img src="assets/img/right-arrow.png" id="right" />
+      </ng-template>
+      <ng-template #item let-item let-i="index">
+
+        <div class="items">
+          <img src="{{ item.name }}">
+        </div>
+
+      </ng-template>
+
+
+
+
+    </div>
+
+    <div class="container" *ngIf="screenSize() <= 450;">
+      <img src="/assets/img/project2_img2.png" class="img-responsive">
+    </div>
+
+    <div class="col-md-4">
+      <h3>Project description</h3>
+      <p>This project is a template infopage created for marketing purposes with possible demo menu leading to the main page of an advertised product. It can be inserted to e.g. Marketo automation software and used in email campaigns.</p>
+      <h3>Technologies used</h3>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>Vanilla JavaScript</li>
+        <li>jQuery</li>
+      </ul>
+      <br/>
+      <button class="btn btn-default" (click)="navigateToInfoPage()">Visit website</button>
+    </div>
+
+  </div>
+
+</div>

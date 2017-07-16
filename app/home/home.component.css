@@ -1,0 +1,86 @@
+.welcome {
+  font-family: 'Homemade Apple', cursive;
+  font-size: 2.4em;
+  font-weight: bolder;
+  float: left;
+  padding: 100px 100px 0;
+  /*-webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  transition: all 0.5s ease;*/
+}
+/*.welcome:hover
+{
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: all 0.5s ease;
+}*/
+
+/*Welcome text animation*/
+
+.welcomeDiv {
+  animation-name: test;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes test {
+  0%   {right:200px; transform: scale(0.5); opacity: 0;}
+  100% {right:0px; transform: scale(1); opacity: 1;}
+}
+
+
+/*Laptop image animation*/
+
+.imgDiv {
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+@keyframes example {
+  0%   {left:200px;}
+  100% {left:0px;}
+}
+
+
+
+/* iPhone5 (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+  .welcome {
+    padding: 50px 50px 0px 70px;
+  }
+}
+/* GalaxyS5 (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 360px) and (max-device-width : 640px) {
+  .welcome{
+    padding-left: 85px;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  .mainDiv {
+    padding-top: 60px;
+    padding-left: 60px;
+  }
+}
+/* iPads Pro (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) {
+  .mainDiv {
+    display: block !important;
+  }
+}
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+  .mainDiv {
+    padding-top: 60px;
+  }
+}
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+  .mainDiv {
+    padding-top: 60px;
+  }
+}

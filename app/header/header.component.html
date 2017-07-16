@@ -1,0 +1,33 @@
+<nav class="navbar navbar-inverse customFont">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a routerLink="" routerLinkActive="active" class="navbar-brand" style="cursor: pointer">Home</a>
+
+      <button type="button"
+              class="navbar-toggle"
+              (click)="onToggleMenu()"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- 'In'-method collapse menu -->
+    <div class="collapse navbar-collapse" [ngClass]="{ 'toggleMenuStyle' : toggleMenu === true }">
+      <ul class="nav navbar-nav">
+        <li><a routerLink="about" style="cursor: pointer">About me</a></li>
+        <li><a routerLink="work" style="cursor: pointer">Portfolio</a></li>
+        <li><a routerLink="contact" style="cursor: pointer">Contact</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right list-inline">
+        <li><a href="https://www.linkedin.com/in/alexandra-novikova-7a441b77/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="https://github.com/happyminion"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+        <li><a href="https://medium.com/@alexandranovikova_33653"><i class="fa fa-medium" aria-hidden="true"></i></a></li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
